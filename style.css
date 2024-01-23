@@ -1,0 +1,232 @@
+body{
+    background: rgba(1, 1, 1, 1.0);
+    background: radial-gradient(at right top, rgba(1, 1, 1, 1.0), rgb(69, 85, 49),rgba(1, 1, 1, 1.0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.contenedor{
+    display: grid;
+    margin: 0 auto;
+    max-width: 700px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 50px 80px;
+}
+
+.card, .card-fixed{
+    background: rgba(1, 1, 1, 0.4);
+    border-radius: 15px;
+    transition: all 0.3s ease-in ;
+}
+
+
+.card:hover{
+    min-width: 100px;
+    position: relative;
+    transform: scale(1.1);
+    z-index: 5;
+    transition: all 0.3s ease-in;
+    background-color: #000000;
+    color: aliceblue;
+
+}
+
+@keyframes letras {
+    from{
+        color: transparent;
+    }
+    75%{
+        color: white; 
+    }
+    to{
+        color: rgb(255, 255, 255);
+    }
+}
+
+    h3{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    p{
+        text-align: center;
+    }
+
+
+    .texto{
+        color: white !important;
+    }
+
+    img{
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+    }
+    .oscuro{
+        background-color: rgba(1, 1, 1, 0.8);
+    }
+
+
+
+.oculto{
+    visibility: hidden;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+    .card:hover > .oculto{
+        /* background-color: aqua; */
+        visibility: visible;
+    }
+
+/* Menu */
+.header{
+    width: 100%;
+    display: grid;
+    grid-column: repeat(3, 1fr);
+    align-content: center;
+}
+
+#menu{
+    background: #000000;
+
+}
+    #menu ul {
+        list-style:none;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(1, 1, 1);
+       }
+       
+       #menu ul a {
+        display:block;
+        color:#a39a48;
+        text-decoration:none;
+        font-weight:400;
+        font-size:25px;
+        padding:10px 30px;
+        font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform:uppercase;
+        letter-spacing:3.5px;
+        
+       }
+       
+       /* items del menu */
+       
+       #menu ul li {
+        position:relative;
+        float:left;
+        margin:0;
+        padding:0;
+       }
+       
+       /* efecto al pasar el ratón por los items del menu */
+       
+       #menu ul li:hover {
+        background:#161616;
+       }
+
+    /* menu desplegable */
+
+        #menu ul ul {
+            display:none;
+            position:absolute;
+            top:100%;
+            /* left:0; */
+            background:#000000;
+            
+            padding:0;
+        }
+   
+   /* items del menu desplegable */
+   
+   #menu ul ul li {
+    float:none;
+    
+   }
+   
+   /* enlaces de los items del menu desplegable */
+   
+   #menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+    font-size: 20px;
+    color: #c2c2c2;
+    text-transform: none;
+    text-align: center;
+
+   }
+   
+   /* items del menu desplegable al pasar el ratón */
+   
+   #menu ul li:hover > ul {
+    display:block;
+   }
+
+   .footer{
+    /* margin: -10px; */
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+   }
+
+
+   .body{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+   }
+
+   .card-fixed{
+    background: rgba(1, 1, 1, 0.8);
+    position: fixed;
+    bottom: 20%;
+    left: 40px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   }
+   
+
+   .card-fixed img{
+    width: 300px;
+   }
+   
+   #cartaFija{
+    position: fixed;
+    height: 300px;
+    visibility: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    box-shadow: 4px 10px 30px rgb(1,1,1);
+    width: 280px;
+    z-index: 100;
+
+   }
+
+
+/* Media query */
+@media all and (max-width:950px) {
+    .card{
+        padding-bottom: 80px;
+    }
+}
+
+@media all and (max-width: 900px)
+{
+    body{
+        background-position: center;
+        background-size: cover;
+    }
+    .contenedor{
+        padding: 0 100px ;
+        grid-template-columns: 1fr;
+    }  
+    .card{
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+
